@@ -1,0 +1,257 @@
+/*Fonts*/
+.gamja-flower-regular {
+  font-family: "Gamja Flower", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Cambiar color de temas */
+/* Tema oscuro */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #88485b; /* Fondo oscuro */
+  --bs-body-color: #fafaf6; /* Texto */
+  --bs-theme-color: #642d42; /* Fondo dropdown */
+  --bs-theme-button: #642d42; /* Color boton dropdown */
+  --bs-theme-hover: #502033; /* Color hover boton */
+  --bs-theme-hover-border: #3d1324; /* Color borde-hover boton */
+  --bs-theme-active: #502033; /* Color boton activo */
+  --bs-theme-icon: #fafaf6; /* Color icono boton */
+  --bs-text-hover: #9b5167; /* Color fondo texto hover */
+  --bs-text-color: #fafaf6; /* Color del texto dentro del boton cambiar modo */
+  --bs-drop-icon: rgb(255, 119, 104);/* Cambiar color de los iconos dentro del dropdown */
+  --bs-drop-icon-hover: orange;/* Cambiar color de los iconos hover dentro del dropdown */
+}
+
+/* Tema claro */
+[data-bs-theme="light"] {
+  --bs-body-bg: #ffffff; /* Fondo claro */
+  --bs-body-color: #6c3445; /* Texto */
+  --bs-theme-color: rgb(252, 252, 252); /* Fondo boton dropdown */
+  --bs-theme-button: rgba(255, 208, 116); /* Color boton dropdown */
+  --bs-theme-hover: rgb(229, 178, 77); /* Color hover boton */
+  --bs-theme-hover-border: rgb(204, 153, 51); /* Color borde-hover boton */
+  --bs-theme-active: rgb(229, 178, 77); /* Color boton activo */
+  --bs-theme-icon: #fafaf6; /* Color icono boton */
+  --bs-text-hover: rgb(238, 238, 238); /* color de hover cambiar modo */
+  --bs-text-color: #535353; /* Color del texto dentro del boton cambiar modo */
+  --bs-drop-icon: red;/* Cambiar color de los iconos dentro del dropdown */
+  --bs-drop-icon-hover: orange;/* Cambiar color de los iconos hover dentro del dropdown */
+}
+
+/* body */
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+span {
+  color: var(--bs-body-color);
+}
+
+.nav-link {
+  padding-right: 3rem;
+}
+
+/* Cambiar color de enlaces de navegación */
+.nav-link {
+  color: var(--bs-body-color); /* Color normal */
+  text-decoration: none;
+}
+
+/* Color al pasar el ratón */
+.nav-link:hover {
+  color: rgba(255, 208, 116); /* Color al pasar el ratón */
+}
+
+/* Estilo para el enlace activo */
+.nav-link.active {
+  color: rgba(255, 208, 116); /* Color para el enlace activo */
+}
+
+/* Boton contacto */
+/* From Uiverse.io by OliverZeros */
+.button {
+  border: none;
+  position: relative;
+  display: inline-flex;
+  height: 2.5rem;
+  align-items: center;
+  border-radius: 9999px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #fafaf6;
+}
+
+.button-item {
+  background-color: transparent;
+  color: #88485b;
+}
+
+.button-item .button-bg {
+  border-color: rgba(255, 208, 116);
+  background-color: rgba(255, 208, 116);
+}
+
+.button-inner,
+.button-inner-hover,
+.button-inner-static {
+  pointer-events: none;
+  display: block;
+}
+
+.button-inner {
+  position: relative;
+}
+
+.button-inner-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+.button-bg {
+  overflow: hidden;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-bg,
+.button-bg-layer,
+.button-bg-layers {
+  display: block;
+}
+
+.button-bg-layers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 10rem);
+}
+
+.button-bg-layer {
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+}
+
+.button-bg-layer.-purple {
+  background-color: #e671a0;
+}
+
+.button-bg-layer.-turquoise {
+  background-color: #f991c0;
+}
+
+.button-bg-layer.-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 208, 116, var(--tw-bg-opacity));
+}
+
+.button:hover .button-inner-static {
+  opacity: 0;
+  transform: translateY(-70%);
+  transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
+}
+
+.button:hover .button-inner-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover .button-bg-layer {
+  transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
+}
+
+.button:hover .button-bg-layer-1 {
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-2 {
+  transition-delay: 0.1s;
+  transform: scale(1);
+}
+
+.button:hover .button-bg-layer-3 {
+  transition-delay: 0.2s;
+  transform: scale(1);
+}
+
+/* botón cambiar tema */
+.bi {
+  vertical-align: -0.125em;
+  fill: var(--bs-theme-icon);
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: var(--bs-theme-button);
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: var(--bs-theme-hover);
+  --bs-btn-hover-border-color: var(--bs-theme-hover-border);
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: var(--bs-theme-active);
+  --bs-btn-active-border-color: var(--bs-theme-hover-border);
+}
+
+/* Dropdown */
+.dropdown-item:hover {
+  background-color: var(--bs-text-hover); /* Color de fondo en hover */
+  color: var(--bs-text-color);
+}
+
+.dropdown-item:active {
+  background-color: var(--bs-text-hover); /* Color de fondo en hover */
+}
+
+.dropdown-item {
+  color: var(--bs-text-color);
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+}
+
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
+
+.dropdown-menu {
+  background-color: var(
+    --bs-theme-color
+  ); /* Cambia el color de fondo del menú desplegable */
+
+}
+
+/* Iconos SVG cambiar tema */
+/* Cambia el color de los íconos SVG dentro del dropdown-menu */
+.dropdown-menu svg {
+  fill: var(--bs-drop-icon); /* Aplica el color deseado para los SVG */
+}
+
+/* Cambia el color de los íconos SVG al hacer hover sobre un item del dropdown */
+.dropdown-item:hover svg {
+  fill: var(--bs-drop-icon-hover); /* Cambia el color del icono al hacer hover */
+}
